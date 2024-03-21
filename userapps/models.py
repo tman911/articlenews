@@ -22,5 +22,17 @@ class Profiles(models.Model):
     def __str__(self):
         return self.name
     
+
+class Certificates(models.Model):
+    description = models.TextField(max_length=50,null=True,blank=True)
+    image = models.ImageField(upload_to='profiles/')
+    source_link = models.CharField(max_length=200,blank=True,null=True)
+
+    def __str__(self):
+        return self.description
+
+  
+    
+    
 class ProfilesName(models.Model):
     pass

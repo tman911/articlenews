@@ -28,7 +28,7 @@
           <div class="singleProject__info">
             <p>{{article.description}}</p>
             <br />
-            {%if request.user != article.owner.user%}
+            {%if request.user == article.owner.user%}
             <a href="{%url 'edit' article.id %}" class="singleProject__developer"><h5>edit</h5></a>
             {%endif%}
             

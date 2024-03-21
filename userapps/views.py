@@ -4,7 +4,7 @@ from .forms import customUserCreationForm
 from django.contrib.auth import login,authenticate,logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from .models import Profiles
+from .models import Profiles,Certificates
 from articles.models import Articles
 from .utils import searchProfiles
 
@@ -86,3 +86,9 @@ def logoutUser(request):
     logout(request)
     messages.success(request, 'user logged out succesfully')
     return redirect('login')
+
+def index(request):
+    certificates = Certificates.objects.all()
+
+    return render(request, 'userapps/index.html',{'certificates':certificates} )
+
