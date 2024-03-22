@@ -89,9 +89,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'Qwe347tgy!',
-        'HOST': 'news.cd04ke4wqh6p.us-east-1.rds.amazonaws.com',
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASS'),
+        'HOST': os.environ.get('DB_HOST'),
         'PORT': '5432'
     }  
 }    
@@ -150,8 +150,8 @@ DEFAULT_FILE_STORAGE = "storages.backends.s3.S3Storage"
 AWS_QUERYSTRING_AUTH = False
 AWA_FILE_OVERWRITE = False
  
-AWS_ACCESS_KEY_ID = 'AKIA2UC27OC3GSRYSSWH'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = 'articlenewsapp-bucket'
 
 if os.getcwd() == '/app':
