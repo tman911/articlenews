@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-^**trb2n+yiuwx*ro8z68clvkdg1&k8fzl3-e&e=b=)+e=6o=k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['3.211.13.86']
+ALLOWED_HOSTS = ['3.211.13.86','localhost']
 
 
 # Application definition
@@ -153,7 +153,3 @@ AWA_FILE_OVERWRITE = False
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = 'articlenewsapp-bucket'
-
-if os.getcwd() == '/app':
-    DEBUG = False
-    
