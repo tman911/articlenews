@@ -26,7 +26,10 @@ SECRET_KEY = 'django-insecure-^**trb2n+yiuwx*ro8z68clvkdg1&k8fzl3-e&e=b=)+e=6o=k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['tumirocks.com', 'www.tumirocks.com']
+
+CSRF_TRUSTED_ORIGINS = ['https://tumirocks.com', 'https://www.tumirocks.com']
+
 
 
 # Application definition
@@ -77,24 +80,36 @@ WSGI_APPLICATION = 'news.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#       'ENGINE': 'django.db.backends.sqlite3',
+#       'NAME': BASE_DIR / 'db.sqlite3',
+#
+#   }
+#}
+  
 DATABASES = {
     'default': {
-       'ENGINE': 'django.db.backends.sqlite3',
-       'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'django_db',
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASS'),
+        'HOST': os.getenv('DB_HOST','db'),
+        'PORT': os.getenv('DB_PORT','5432')
+    }  
+}    
 
-   }
-}
-  
 #DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.postgresql',
-#        'NAME': 'postgres',
-#        'USER': os.environ.get('DB_USER'),
-#        'PASSWORD': os.environ.get('DB_PASS'),
-#        'HOST': os.environ.get('DB_HOST'),
-#        'PORT': '5432'
+#        'NAME': 'django_db',
+#        'USER': "django_user",
+#        'PASSWORD': "qwe345tgy",
+#        'HOST': "52.3.7.200",
+#       'PORT': '5432'
 #    }  
-#}    
+#}   
+
 
 
 # Password validation
@@ -132,8 +147,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = ["static/"] 
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 MEDIA_URL = '/images/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
