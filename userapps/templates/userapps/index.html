@@ -1,282 +1,243 @@
-{%load static%}
+{% load static %}
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Resume</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="{% static 'images/favicon.ico'%}" rel="icon">
-  <link href="{% static 'portfolio/assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="{% static 'portfolio/assets/vendor/aos/aos.css' %}" rel="stylesheet">
-  <link href="{% static 'portfolio/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{% static 'portfolio/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-  <link href="{% static 'portfolio/assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
-  <link href="{% static 'portfolio/assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
-  <link href="{% static 'portfolio/assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="{% static 'portfolio/assets/css/style.css'%}" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Updated: Mar 13 2024 with Bootstrap v5.3.3
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Live Resume :: Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendors/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'static/portfolio/assets/css/live-resume.css' %}">
 </head>
 
 <body>
-  
+    <header>
+        <button class="btn btn-white btn-share ml-auto mr-3 ml-md-0 mr-md-auto"><img src="assets/images/share.svg" alt="share" class="btn-img">
+            SHARE</button>
+        <nav class="collapsible-nav" id="collapsible-nav">
+            <a href="index.html" class="nav-link active">HOME</a>
+            <a href="resume.html" class="nav-link">RESUME</a>
+            <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
+            <a href="blog.html" class="nav-link">BLOG</a>
+            <a href="contact.html" class="nav-link">CONTACT</a>
+        </nav>
+        <button class="btn btn-menu-toggle btn-white rounded-circle" data-toggle="collapsible-nav"
+            data-target="collapsible-nav"><img src="assets/images/hamburger.svg" alt="hamburger"></button>
+    </header>
+    <div class="content-wrapper">
+        <aside>
+            <div class="profile-img-wrapper">
+                <img src="assets/images/Profile.png" alt="profile">
+            </div>
+            <h1 class="profile-name">Daisy Murphy</h1>
+            <div class="text-center">
+                <span class="badge badge-white badge-pill profile-designation">UI / UX Designer</span>
+            </div>
+            <nav class="social-links">
+                <a href="#!" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#!" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#!" class="social-link"><i class="fab fa-behance"></i></a>
+                <a href="#!" class="social-link"><i class="fab fa-dribbble"></i></a>
+                <a href="#!" class="social-link"><i class="fab fa-github"></i></a>
+            </nav>
+            <div class="widget">
+                <h5 class="widget-title">personal information</h5>
+                <div class="widget-content">
+                    <p>BIRTHDAY : 15 April 1990</p>
+                    <p>WEBSITE : www.example.com</p>
+                    <p>PHONE : +1 123 000 4444</p>
+                    <p>MAIL : your@example.com</p>
+                    <p>Location : California, USA</p>
+                    <button class="btn btn-download-cv btn-primary rounded-pill"> <img src="assets/images/download.svg" alt="download"
+                        class="btn-img">DOWNLOAD CV </button>
+                </div>
+            </div>
+            <div class="widget card">
+                <div class="card-body">
+                    <div class="widget-content">
+                        <h5 class="widget-title card-title">LANGUAGES</h5>
+                        <p>English : native</p>
+                        <p>Spanish : fluent</p>
+                        <p>Italian : fluent</p>
+                    </div>
+                </div>
+            </div>
+            <div class="widget card">
+                <div class="card-body">
+                    <div class="widget-content">
+                        <h5 class="widget-title card-title">INTERESTS</h5>
+                        <p>Video games</p>
+                        <p>Finance</p>
+                        <p>Basketball</p>
+                        <p>Theatre</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <main>
+            <section class="intro-section">
+                <h2 class="section-title">Hello, Daisy Murphy!</h2>
+                <p>I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print
+                    media. I enjoy turning complex problems into simple, beautiful and intuitive designs. My job is to
+                    build your website so that it is functional and user-friendly but at the same time attractive.
+                    Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use.
+                    My aim is to bring across your message and identity in the most creative way. I created web design
+                    for many famous brand companies.</p>
+                <a href="#!" class="btn btn-primary btn-hire-me">HIRE ME</a>
+            </section>
+            <section class="resume-section">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h6 class="section-subtitle">RESUME</h6>
+                        <h2 class="section-title">EDUCATION</h2>
+                        <ul class="time-line">
+                            <li class="time-line-item">
+                                <span class="badge badge-primary">1998 - 2005</span>
+                                <h6 class="time-line-item-title">Master In Computer Science</h6>
+                                <p class="time-line-item-subtitle">MASTER, UNIVERSITY</p>
+                                <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla
+                                    vitae, interdum sed tortor.</p>
+                            </li>
+                            <li class="time-line-item">
+                                <span class="badge badge-primary">1995 - 1998</span>
+                                <h6 class="time-line-item-title">Studied at Harvard University</h6>
+                                <p class="time-line-item-subtitle">UNIVERSITY</p>
+                                <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla
+                                    vitae, interdum sed tortor.
+                                </p>
+                            </li>
+                            <li class="time-line-item">
+                                <span class="badge badge-primary">1993 - 1995</span>
+                                <h6 class="time-line-item-title">Studied at Oxford University</h6>
+                                <p class="time-line-item-subtitle">UNIVERSITY</p>
+                                <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla
+                                    vitae, interdum sed tortor.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <h6 class="section-subtitle">RESUME</h6>
+                        <h2 class="section-title">Experience</h2>
+                        <ul class="time-line">
+                            <li class="time-line-item">
+                                <span class="badge badge-primary">2010 - 2014</span>
+                                <h6 class="time-line-item-title">UI/UX Designer</h6>
+                                <p class="time-line-item-subtitle">Web Agency</p>
+                                <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla
+                                    vitae, interdum sed
+                                    tortor.</p>
+                            </li>
+                            <li class="time-line-item">
+                                <span class="badge badge-primary">2008 - 2010</span>
+                                <h6 class="time-line-item-title">Web Designer</h6>
+                                <p class="time-line-item-subtitle">Apple Inc.</p>
+                                <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla
+                                    vitae, interdum sed
+                                    tortor.
+                                </p>
+                            </li>
+                            <li class="time-line-item">
+                                <span class="badge badge-primary">2006 - 2008</span>
+                                <h6 class="time-line-item-title">Graphic Designer</h6>
+                                <p class="time-line-item-subtitle">Apple Inc.</p>
+                                <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla
+                                    vitae, interdum sed
+                                    tortor.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="services-section">
+                <h6 class="section-subtitle">WHAT I DO</h6>
+                <h2 class="section-title">SERVICES</h2>
+                <div class="row">
+                    <div class="media service-card col-lg-6">
+                        <div class="service-icon">
+                            <img src="assets/images/001-target.svg" alt="target">
+                        </div>
+                        <div class="media-body">
+                            <h5 class="service-title">web designing</h5>
+                            <p class="service-description">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed
+                                tortor.</p>
+                        </div>
+                    </div>
+                    <div class="media service-card col-lg-6">
+                        <div class="service-icon">
+                            <img src="assets/images/003-idea.svg" alt="bulb">
+                        </div>
+                        <div class="media-body">
+                            <h5 class="service-title">Graphic design</h5>
+                            <p class="service-description">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed
+                                tortor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="media service-card col-lg-6">
+                        <div class="service-icon">
+                            <img src="assets/images/002-development.svg" alt="development">
+                        </div>
+                        <div class="media-body">
+                            <h5 class="service-title">Development</h5>
+                            <p class="service-description">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed
+                                tortor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="media service-card col-lg-6">
+                        <div class="service-icon">
+                            <img src="assets/images/004-smartphone.svg" alt="smartphone">
+                        </div>
+                        <div class="media-body">
+                            <h5 class="service-title">Mobile design</h5>
+                            <p class="service-description">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed
+                                tortor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="testimonial-section">
+                <div id="testimonialCarousel" class="testimonial-carousel carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <p class="testimonial-content">Mauris magna sapien, pharetra consectetur fringilla vitae,
+                                interdum sed tortor.</p>
+                            <img src="assets/images/Profile.png" alt="profile" class="testimonial-img">
+                            <p class="testimonial-name">Nout Golstein</p>
+                        </div>
+                        <div class="carousel-item">
+                            <p class="testimonial-content">Mauris magna sapien, pharetra consectetur fringilla vitae,
+                                interdum sed tortor.</p>
+                            <img src="assets/images/Profile.png" alt="profile" class="testimonial-img">
+                            <p class="testimonial-name">Nout Golstein</p>
+                        </div>
+                        <div class="carousel-item">
+                            <p class="testimonial-content">Mauris magna sapien, pharetra consectetur fringilla vitae,
+                                interdum sed tortor.</p>
+                            <img src="assets/images/Profile.png" alt="profile" class="testimonial-img">
+                            <p class="testimonial-name">Nout Golstein</p>
+                        </div>
+                    </div>
+                    <ol class="carousel-indicators">
+                        <li data-target="#testimonialCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#testimonialCarousel" data-slide-to="1"></li>
+                        <li data-target="#testimonialCarousel" data-slide-to="2"></li>
+                    </ol>
+                </div>
+            </section>
 
-
-  <!-- ======= Header ======= -->
-  
-  <header id="header">
-    <div class="d-flex flex-column">
-
-      <div class="profile">
-        <img src="{% static 'portfolio/assets/img/my_pic.jpeg'%}" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="{%url 'index' %}">Tumelo Motsele</a></h1>
-        
-      </div>
-
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume & Qualifications</span></a></li>
-
-        </ul>
-      </nav><!-- .nav-menu -->
+            <footer>Live Resume @ <a href="https://www.bootstrapdash.com" target="_blank" rel="noopener noreferrer">BootstrapDash</a>. All Rights Reserved 2020</footer>
+        </main>
     </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-<!-- End Hero -->
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>About</h2>
-
-        </div>
-        
-
-        <div class="row">
-          
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Cyber &amp; DevOps </h3>
-            <p class="fst-italic">
-              Developed NewzCorner, a news sharing web application with CRUD functionality using Django framework, HTML, CSS, and PostgreSQL for databases. 
-              Leveraged Amazon RDS for database management and S3 buckets for efficient storage and delivery of static files.
-            </p>
-            <div class="row">
-              <div class="col-lg-3">
-                <ul>
-                  <li>
-                    <i class="bi bi-chevron-right"></i>
-                    <strong>Project Link:</strong>  <br>
-                    <a href="{%url 'articles' %}" target="_blank">Link here to Newzcorner </a>
-                  </li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+2778 495 3503 </span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Gauteng, SA</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>tumelomotsele@gmail.com</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-3">
-                
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Facts Section ======= -->
-    <!-- End Facts Section -->
-
-    <!-- ======= Skills Section ======= -->
-    <!-- End Skills Section -->
-
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Resume</h2>
-        </div>
-
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="resume-title">Professional Experience</h3>
-          <div class="resume-item">
-            <h4>ICT Manager</h4>
-            <h5>April 2017 - Present</h5>
-            <p><em>Pointb Digital Marketing Agency, Gauteng </em></p>
-            <ul>
-              <li>Server architecture and Infrastructure support </li>
-              <li>CI/CD pipelines</li>
-              <li>Staff training and Knowledge sharing  </li>
-              <li>Management of hosted services </li>
-              <li>Mail Administration POP/IMAP</li>
-              <li>IT Assets and inventory management </li>
-              <li>Project management </li>
-              <li>server installations / management and upgrades </li>
-              <li> DNS/DHCP, Firewall and VPN</li>
-              <li>Management of hosted services  and CLoud Platforms</li>
-            </ul>
-          </div>
-          <div class="resume-item">
-            <h4>Senior Systems Administrator</h4>
-            <h5>July 2012 - March 2017</h5>
-            <p><em>Micros SA(AdapIT), SA</em></p>
-            <ul>
-              <ul><strong>Severs and Application Support</strong> </ul>
-              <li>Attend to and resolve support calls logged at the Service Desk within</li>
-              <li>Virtualization (hyper-V & Vmware Esxii6 )</li>
-              <li>Domain controller and Group policy object modeling</li>
-              <li>Microsoft Exchange server 2007/2013 management</li>
-              <li>DHCP and DNS management</li>
-              <li>Microsoft Active directory</li>
-              <li>Server and Storage (Dell Equalogics)</li>
-              <li>Linux Server Adminsitration</li>
-              <li>Antivirus and Firewall Administration</li>
-              <li>Maintain all internal system application for business</li>
-              <ul><strong>Networking</strong> </ul>
-              <li>Layer 2 & 3 routing & Switching (Cisco)</li>
-              <li>CISCO Call Manager administration</li>
-              <li>Working knowledge of ( Ripv2, OSPF ,MPLS )</li>
-              <li>Set  up/configuring core/access layer switches (CISCO and DELL)</li>
-              <li> VPN and APN setup</li>
-              <li>Network Monitoring ( Nagios , Dell OME)</li>
-              <li> Troubleshooting LAN/WAN connectivity issues</li>
-              <li>Wireless AP setup and troubleshooting (CISCO)</li>
-              <li>Avaya IP office suite and phones setup</li>
-              <li>Voip and Pbx</li>
-              <li></li>
-            </ul>
-          </div>
-          <div class="resume-item">
-            <h4>IT Support Consultant</h4>
-            <h5>December 2009 - June 2012</h5>
-            <p><em>Pilot Software(SA) </em></p>
-            <ul>
-              <li>1st line support support ,assisting telephonically and remotely</li>
-              <li> Log all calls and attend according to SLA on Sage Pastel evolution </li>
-              <li>Call monitoring according to SLA and ticketing system </li>
-              <li>Installing and configuring Pilot software solutions on client servers</li>
-              <li>Working with SQL database ,creating menu items and making changes</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
-            
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>International Diploma in IT Engineering </h4>
-              <h5>2007 - 2008</h5>
-              <p><em>Cti Education Group (Pearson Vue)</em></p>
-              <li>A+ preparation</li>
-              <li>N+ preparation</li>
-              <li>S+ Preparation</li>
-              <li>Windows Server Administration</li>
-              <li>Administering Linux (Fedora Core & Ubuntu )</li>
-              <li>Customer Relations</li>
-            </div>
-            
-          </div>
-        
-        
-        </div>
-        
-
-      
-      </div>
-    
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Certification and Badges</h2>
-           
-        </div>
-        <!-- 
-        {%for certificate in certificates%}
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <a href="{{ certificate.source_link }}" target="_blank"> 
-                <img src="{{ certificate.image.url }}" class="img-fluid" alt="" style="width: 300; height: auto;">
-              </a>
-              <div class="portfolio-links">
-                <a href="{{certificate.source_link}}"  data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="{{ certificate.source_link }}" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div> 
-
-
-          
-
-        </div>
-        {%endfor%}-->
-
-      </div>
-    
-    </section><!-- End Resume Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    
-    <!-- End Portfolio Section -->
-
-
-    <!-- ======= Services Section ======= -->
-    <!-- End Services Section -->
-
-    
-
-      
-
-  </main><!-- End #main -->
-  
-
-
-  
-
-  <!-- ======= Footer ======= -->
-  <!-- End  Footer -->
-
-
-  <!--<!-- Vendor JS Files -->
-  <script src="{% static 'portfolio/assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
-  <script src="{% static 'portfolio/assets/vendor/aos/aos.js' %}"></script>
-  <script src="{% static 'portfolio/assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  <script src="{% static 'portfolio/assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
-  <script src="{% static 'portfolio/assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
-  <script src="{% static 'portfolio/assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
-  <script src="{% static 'portfolio/assets/vendor/typed.js/typed.umd.js' %}"></script>
-  <script src="{% static 'portfolio/assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
-  <script src="{% static 'portfolio/assets/vendor/php-email-form/validate.js' %}"></script>
-
-  <!-- Template Main JS File -->
-  <script src="{% static 'portfolio/assets/js/main.js'%}"></script> 
-
+    <script src="assets/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="assets/vendors/@popperjs/core/dist/umd/popper-base.min.js"></script>
+    <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/live-resume.js"></script>
 </body>
 
 </html>

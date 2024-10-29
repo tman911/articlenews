@@ -14,8 +14,8 @@ class Profiles(models.Model):
     bio = models.TextField(max_length=200, blank=True, null=True)
     location = models.CharField(max_length=200, blank=True, null=True)
     description = models.CharField(max_length=200, blank=True, null=True)
-    profile_image = models.ImageField(
-        null=True, blank=True, upload_to='profiles/', default="profiles/user-default.png")
+    #profile_image = models.ImageField(
+    #    null=True, blank=True, upload_to='profiles/', default="profiles/user-default.png")
     created = models.DateTimeField(auto_now_add=True,null=True)
     
     

@@ -6,7 +6,7 @@ from .views import (
 )
 
 urlpatterns = [
-    path('articles/',articlesPage,name="articles"),
+    path('',articlesPage,name="articles"),
     path('article/<str:pk>/',singleArticle,name="article"),
     path('edit/<str:pk>',editArticle,name='edit'),
 ]
